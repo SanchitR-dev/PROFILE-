@@ -5,701 +5,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanchit Rawool - Web Development & Digital Solutions</title>
     <meta name="description" content="Sanchit Rawool's portfolio showcasing custom web development and digital solutions. Bringing your digital visions to life with modern technologies like React, Node.js, and MongoDB.">
-    <meta name="keywords" content="Sanchit Rawool, web developer, web solutions, React, Node.js, MongoDB, full-stack, portfolio, custom web applications, Kudal, Maharashtra, India, Python, Java, JavaScript, SQL, HTML, CSS, JSX, Express.js, MySQL, Git, GitHub, Netlify, Render">
-    
+    <meta name="keywords" content="Sanchit Rawool, web developer, web solutions, React, Node.js, MongoDB, full-stack, portfolio, custom web applications, Kudal, Maharashtra, India, Python, Java, JavaScript, SQL, HTML, CSS, JSX, Express.js, MySQL, Git, GitHub, Netlify, Render, Cybersecurity, IT Support">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="YOUR_PORTFOLIO_URL_HERE">
     <meta property="og:title" content="Sanchit Rawool - Web Development & Digital Solutions">
-    <meta property="og:description" content="Sanchit Rawool's portfolio showcasing custom web development and digital solutions. Bringing your digital visions to life with modern technologies like React, Node.js, and MongoDB.">
+    <meta property="og:description" content="Sanchit Rawool's portfolio showcasing custom web development and digital solutions.">
     <meta property="og:image" content="https://placehold.co/1200x630/e0e7ff/3f51b5?text=Sanchit+Rawool+Portfolio">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #3a0ca3;
-            --secondary: #7209b7;
-            --accent: #f72585;
-            --light: #f8f9fa;
-            --dark: #212529;
-            --gold: #ffd700;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8f9fa;
-            color: #212529;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        
-        .luxury-font {
-            font-family: 'Playfair Display', serif;
-        }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        /* Custom styles for luxury aesthetic */
-        .btn-primary {
-            @apply bg-gradient-to-r from-purple-800 to-pink-600 text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn-primary::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                to bottom right,
-                rgba(255,255,255,0.3) 0%,
-                rgba(255,255,255,0) 60%
-            );
-            transform: rotate(30deg);
-        }
-        
-        .btn-primary:hover::after {
-            animation: shine 1.5s infinite;
-        }
-        
-        @keyframes shine {
-            100% {
-                left: 150%;
-            }
-        }
-        
-        .btn-secondary {
-            @apply bg-white text-gray-900 px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 border-2 border-gray-200;
-        }
-        
-        .card {
-            @apply bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .section-heading {
-            @apply text-5xl font-bold text-gray-900 mb-8 luxury-font;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-heading::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(to right, var(--primary), var(--accent));
-            border-radius: 2px;
-        }
-        
-        .sub-heading {
-            @apply text-2xl font-semibold text-gray-800 mb-6;
-        }
-        
-        /* Navbar styles */
-        .navbar-link {
-            @apply text-lg font-medium transition-all duration-300 relative;
-        }
-        
-        .navbar-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gold);
-            transition: width 0.3s ease;
-        }
-        
-        .navbar-link:hover::after {
-            width: 100%;
-        }
-        
-        .skill-icon {
-            @apply w-20 h-20 mb-4 p-4 rounded-full bg-gradient-to-br from-indigo-100 to-purple-100;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        
-        /* Hero section */
-        .hero-gradient {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-        }
-        
-        /* Project cards */
-        .project-card {
-            transition: all 0.3s ease;
-            perspective: 1000px;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        /* Contact section */
-        .contact-gradient {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-        }
-        
-        /* Luxury divider */
-        .luxury-divider {
-            height: 2px;
-            background: linear-gradient(to right, transparent, rgba(255,215,0,0.5), transparent);
-            margin: 3rem 0;
-        }
-        
-        /* Floating animation */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
-    </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased">
 
-    <header class="hero-gradient text-white py-28 rounded-b-3xl shadow-2xl relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/diamond-upholstery.png')]"></div>
-        </div>
+    <header class="hero-gradient text-white py-28 relative overflow-hidden">
+        <div id="particles-js-header" class="absolute inset-0"></div>
         <div class="container text-center relative z-10">
-            <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight luxury-font">
-                Hi, I'm <span class="text-gold-500" style="color: var(--gold);">Sanchit Rawool</span>
+            <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight luxury-font" data-aos="fade-down">
+                Hi, I'm <span style="color: var(--gold);">Sanchit Rawool</span>
             </h1>
-            <p class="text-2xl md:text-3xl mb-10 opacity-90 max-w-3xl mx-auto">
+            <p class="text-2xl md:text-3xl mb-10 opacity-90 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
                 Crafting <span class="luxury-font italic">Digital Excellence</span> Through Innovative Web Solutions
             </p>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
-                <a href="#projects" class="btn-primary">
-                    <span class="relative z-10">View My Work</span>
-                </a>
-                <a href="#contact" class="btn-secondary">
-                    <span class="relative z-10">Get in Touch</span>
-                </a>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12" data-aos="fade-up" data-aos-delay="400">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-secondary">Get in Touch</a>
             </div>
-            <nav class="mt-12">
+            <nav class="mt-12" data-aos="fade-up" data-aos-delay="600">
                 <ul class="flex flex-wrap justify-center gap-6 sm:gap-10">
                     <li><a href="#about" class="navbar-link text-white hover:text-gold-300">About</a></li>
                     <li><a href="#skills" class="navbar-link text-white hover:text-gold-300">Skills</a></li>
                     <li><a href="#projects" class="navbar-link text-white hover:text-gold-300">Projects</a></li>
-                    <li><a href="#why-choose-me" class="navbar-link text-white hover:text-gold-300">Why Choose Me?</a></li>
-                    <li><a href="#interests" class="navbar-link text-white hover:text-gold-300">Interests</a></li>
+                    <li><a href="#certifications" class="navbar-link text-white hover:text-gold-300">Certifications</a></li>
                     <li><a href="#contact" class="navbar-link text-white hover:text-gold-300">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="about" class="py-24 bg-white">
-        <div class="container text-center">
-            <h2 class="section-heading">About Me</h2>
-            <div class="max-w-4xl mx-auto">
-                <p class="text-xl text-gray-700 leading-relaxed">
-                    I'm a <span class="font-semibold text-purple-800">Computer Science undergraduate</span> (Mumbai University, 2026) with hands-on experience in full-stack development using <span class="font-semibold">React, Node.js, MongoDB, and JavaScript</span>. 
-                </p>
-                <p class="text-xl text-gray-700 mt-6 leading-relaxed">
-                    Passionate about building <span class="italic">smart, user-friendly applications</span>, exploring new technologies, and delivering complete project solutions efficiently. I specialize in creating <span class="font-semibold">robust and elegant web solutions</span>, dedicated to bringing high-quality digital tools to clients.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="py-24 bg-gray-50">
-        <div class="container">
-            <h2 class="section-heading text-center">Technical Skills & Tools</h2>
-            <p class="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto">
-                Mastery of modern technologies to deliver exceptional digital experiences
-            </p>
-            
-            <div class="mb-16">
-                <h3 class="sub-heading text-center text-gray-800 mb-10">Programming Languages</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/color/96/000000/python--v1.png" alt="Python Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">Python</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo--v1.png" alt="Java Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">Java</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/color/96/000000/javascript--v1.png" alt="JavaScript Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">JavaScript</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/ios-filled/96/000000/data-recovery.png" alt="SQL Icon" class="skill-icon" style="filter: invert(39%) sepia(87%) saturate(601%) hue-rotate(175deg) brightness(97%) contrast(92%);"/>
-                        <p class="font-semibold text-gray-700">SQL</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 88%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mb-16">
-                <h3 class="sub-heading text-center text-gray-800 mb-10">Web Technologies</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/color/96/000000/html-5--v1.png" alt="HTML5 Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">HTML5</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 98%"></div>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/color/96/000000/css3.png" alt="CSS3 Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">CSS3</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/officel/80/000000/react.png" alt="React Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">React.js</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 92%"></div>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/fluency/96/000000/node-js.png" alt="Node.js Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">Node.js</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/color/96/000000/express-js.png" alt="Express.js Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">Express.js</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 88%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mb-16">
-                <h3 class="sub-heading text-center text-gray-800 mb-10">Database Technologies</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/color/96/000000/mongodb.png" alt="MongoDB Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">MongoDB</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/color/96/000000/mongoose.png" alt="Mongoose Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">Mongoose</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 82%"></div>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/external-soft-fill-juicy-fish/60/external-mysql-databases-soft-fill-soft-fill-juicy-fish.png" alt="MySQL Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">MySQL</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mb-12">
-                <h3 class="sub-heading text-center text-gray-800 mb-10">Tools & Platforms</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/color/96/000000/git.png" alt="Git Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">Git</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/color/96/000000/github--v1.png" alt="GitHub Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">GitHub</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 92%"></div>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/color/96/000000/visual-studio-code-2019.png" alt="VS Code Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">VS Code</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/color/96/000000/postman-api.png" alt="Postman Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">Postman</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/color/96/000000/npm.png" alt="npm Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">npm</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 88%"></div>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/color/96/000000/netlify.png" alt="Netlify Icon" class="skill-icon"/>
-                        <p class="font-semibold text-gray-700">Netlify</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col items-center p-6 hover:bg-gradient-to-br from-indigo-50 to-purple-50">
-                        <img src="https://img.icons8.com/color/96/000000/console.png" alt="Terminal Icon" class="skill-icon" style="filter: invert(15%) sepia(70%) saturate(601%) hue-rotate(240deg) brightness(97%) contrast(92%);"/>
-                        <p class="font-semibold text-gray-700">Terminal</p>
-                        <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 85%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-24 bg-white">
-        <div class="container">
-            <h2 class="section-heading text-center">Featured Projects</h2>
-            <p class="text-xl text-gray-600 text-center mb-16 max-w-4xl mx-auto">
-                Innovative solutions that demonstrate my expertise in full-stack development
-            </p>
-
-            <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
-                <div class="card project-card p-10 bg-gradient-to-br from-indigo-50 to-purple-50">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center mr-4">
-                            <i class="fas fa-comment-alt text-white text-xl"></i>
-                        </div>
-                        <h3 class="sub-heading text-indigo-700">Feedback Web Application</h3>
-                    </div>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        A comprehensive and intuitive feedback system designed specifically for hotels to gather valuable guest insights, improve services, and boost their reputation.
+    <main>
+        <section id="about" class="py-24 bg-white">
+            <div class="container text-center">
+                <h2 class="section-heading" data-aos="fade-up">About Me</h2>
+                <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-xl text-gray-700 leading-relaxed">
+                        I'm a Computer Science undergraduate from SRM College, Kudal (Mumbai University, Expected 2026), with hands-on experience in full-stack development using React, Node.js, MongoDB, and JavaScript.
                     </p>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-gray-900">Effortless Guest Feedback:</strong> Guests scan a QR code, visit a user-friendly site, and submit feedback in minutes.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-gray-900">Interactive Star Ratings:</strong> Intuitive 1-5 star ratings for Food, Service, Cleanliness, and Overall Experience.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-gray-900">Secure Admin Dashboard:</strong> Hotel owners can securely log in to view, analyze, and manage all feedback entries.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-gray-900">Public Good Reviews Display:</strong> Showcase positive feedback (4+ stars) directly on a public page.</span>
-                        </li>
-                    </ul>
-                    <div class="mt-8 text-center">
-                        <a href="https://feedbacksyste.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-primary inline-block">
-                            View Live Demo
-                            <i class="fas fa-external-link-alt ml-2"></i>
+                    <p class="text-xl text-gray-700 mt-6 leading-relaxed">
+                        Passionate about building smart, user-friendly applications, exploring new technologies, and delivering complete project solutions efficiently. I am also a Google Certified Cybersecurity and IT Support Professional.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-24 bg-gray-50">
+            <div class="container">
+                <h2 class="section-heading text-center" data-aos="fade-up">Technical Skills & Tools</h2>
+
+                <div class="mt-16">
+                    <h3 class="sub-heading" data-aos="fade-up">Core Technologies</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div class="card" data-aos="fade-up"><img src="https://img.icons8.com/color/96/000000/python--v1.png" alt="Python Icon" class="skill-icon"/><p>Python</p></div>
+                        <div class="card" data-aos="fade-up" data-aos-delay="100"><img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo--v1.png" alt="Java Icon" class="skill-icon"/><p>Java</p></div>
+                        <div class="card" data-aos="fade-up" data-aos-delay="200"><img src="https://img.icons8.com/color/96/000000/javascript--v1.png" alt="JavaScript Icon" class="skill-icon"/><p>JavaScript</p></div>
+                        <div class="card" data-aos="fade-up" data-aos-delay="300"><img src="https://img.icons8.com/ios-filled/96/000000/data-recovery.png" alt="SQL Icon" class="skill-icon sql-icon"/><p>SQL</p></div>
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <h3 class="sub-heading" data-aos="fade-up">Frontend & Backend</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                        <div class="card" data-aos="fade-up"><img src="https://img.icons8.com/color/96/000000/html-5--v1.png" alt="HTML5 Icon" class="skill-icon"/><p>HTML5</p></div>
+                        <div class="card" data-aos="fade-up" data-aos-delay="100"><img src="https://img.icons8.com/color/96/000000/css3.png" alt="CSS3 Icon" class="skill-icon"/><p>CSS3</p></div>
+                        <div class="card" data-aos="fade-up" data-aos-delay="200"><img src="https://img.icons8.com/officel/80/000000/react.png" alt="React Icon" class="skill-icon"/><p>React.js</p></div>
+                        <div class="card" data-aos="fade-up" data-aos-delay="300"><img src="https://img.icons8.com/fluency/96/000000/node-js.png" alt="Node.js Icon" class="skill-icon"/><p>Node.js</p></div>
+                        <div class="card" data-aos="fade-up" data-aos-delay="400"><img src="https://img.icons8.com/color/96/000000/express-js.png" alt="Express.js Icon" class="skill-icon"/><p>Express.js</p></div>
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <h3 class="sub-heading" data-aos="fade-up">Databases & Development Tools</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                        <div class="card" data-aos="fade-up"><img src="https://img.icons8.com/color/96/000000/mongodb.png" alt="MongoDB Icon" class="skill-icon"/><p>MongoDB</p></div>
+                        <div class="card" data-aos="fade-up" data-aos-delay="100"><img src="https://img.icons8.com/external-soft-fill-juicy-fish/60/external-mysql-databases-soft-fill-soft-fill-juicy-fish.png" alt="MySQL Icon" class="skill-icon"/><p>MySQL</p></div>
+                        <div class="card" data-aos="fade-up" data-aos-delay="200"><img src="https://img.icons8.com/color/96/000000/git.png" alt="Git Icon" class="skill-icon"/><p>Git & GitHub</p></div>
+                        <div class="card" data-aos="fade-up" data-aos-delay="300"><img src="https://img.icons8.com/color/96/000000/postman-api.png" alt="Postman Icon" class="skill-icon"/><p>Postman</p></div>
+                        <div class="card" data-aos="fade-up" data-aos-delay="400"><img src="https://img.icons8.com/color/96/000000/visual-studio-code-2019.png" alt="VS Code Icon" class="skill-icon"/><p>VS Code</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-24 bg-white">
+            <div class="container">
+                <h2 class="section-heading text-center" data-aos="fade-up">Featured Projects</h2>
+                <div class="space-y-24 mt-16">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="project-image-container" data-aos="fade-right">
+                            <img src="Feed.jpg" alt="Feedback App Screenshot" class="rounded-lg shadow-xl">
+                        </div>
+                        <div data-aos="fade-left">
+                            <h3 class="text-3xl font-bold mb-4 luxury-font text-indigo-700">Feedback Web Application</h3>
+                            <p class="text-gray-600 mb-6">A customer feedback system for restaurants to gather valuable guest insights and improve services.</p>
+                            <a href="https://feedbacksyste.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-primary">View Live Demo <i class="fas fa-external-link-alt ml-2"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="md:order-2" data-aos="fade-left">
+                             <div class="project-image-container">
+                                <img src="QR.jpg" alt="QR Menu App Screenshot" class="rounded-lg shadow-xl">
+                            </div>
+                        </div>
+                        <div class="md:order-1" data-aos="fade-right">
+                            <h3 class="text-3xl font-bold mb-4 luxury-font text-emerald-700">Digi MenuCard</h3>
+                            <p class="text-gray-600 mb-6">A digital restaurant menu web application, allowing customers to scan a QR code to instantly view the menu.</p>
+                            <a href="https://qrtoorder.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: linear-gradient(to right, #006400, #00A96E);">View Live Demo <i class="fas fa-external-link-alt ml-2"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="project-image-container" data-aos="fade-right">
+                             <img src="https://placehold.co/600x400/ffe0b2/e65100?text=Foodie+AI+System" alt="Foodie AI System Screenshot" class="rounded-lg shadow-xl">
+                        </div>
+                        <div data-aos="fade-left">
+                            <h3 class="text-3xl font-bold mb-4 luxury-font text-orange-700">AI Restaurant Ordering System</h3>
+                            <p class="text-gray-600 mb-6">A smart ordering platform for restaurants and cafés, enhancing user interaction and streamlining operations.</p>
+                            <button class="btn-disabled">Coming Soon</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="py-24 bg-gray-50">
+            <div class="container text-center">
+                <h2 class="section-heading" data-aos="fade-up">Professional Certifications</h2>
+                <div class="grid md:grid-cols-2 gap-10 mt-16">
+                    <div class="card cert-card" data-aos="fade-up">
+                        <div class="cert-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="font-bold text-xl my-3">Google Cybersecurity Professional Certificate</h3>
+                        <p class="text-gray-600">Topics: Security Foundations, Network Security, Risk Management, Incident Response, SIEM tools, and Threat Intelligence.</p>
+                        <p class="text-sm text-gray-500 mt-4">Issued by: Coursera</p>
+                    </div>
+                     <div class="card cert-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="cert-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="font-bold text-xl my-3">Google IT Support Specialization</h3>
+                        <p class="text-gray-600">Topics: Technical Support Fundamentals, Networking, Operating Systems, System Administration, and IT Security.</p>
+                         <p class="text-sm text-gray-500 mt-4">Issued by: Coursera</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-gradient text-white py-28 relative overflow-hidden">
+            <div id="particles-js-contact" class="absolute inset-0"></div>
+            <div class="container text-center relative z-10">
+                <h2 class="section-heading text-white" data-aos="fade-up">Get In Touch</h2>
+                <p class="text-xl text-indigo-100 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Ready to discuss your next project? Let's connect!
+                </p>
+                <div class="max-w-md mx-auto glass-card p-8 rounded-2xl" data-aos="zoom-in-up">
+                    <div class="space-y-4">
+                        <a href="mailto:sanchitrawool@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i> sanchitrawool@gmail.com
+                        </a>
+                         <a href="mailto:mac44srm@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i> mac44srm@gmail.com
+                        </a>
+                        <a href="tel:+917709942606" class="contact-link">
+                            <i class="fas fa-phone-alt"></i> +91 77099 42606
                         </a>
                     </div>
-                </div>
-                <div class="relative">
-                    <div class="card bg-white p-2 rounded-2xl shadow-2xl overflow-hidden">
-                        <img src="https://placehold.co/600x400/e0e7ff/3f51b5?text=Feedback+App+Screenshot" alt="Screenshot of Feedback Web Application" class="rounded-xl w-full h-auto">
-                    </div>
-                    <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center shadow-xl">
-                        <i class="fas fa-star text-white text-3xl"></i>
+                    <div class="flex justify-center space-x-6 mt-8">
+                        <a href="https://in.linkedin.com/in/sanchit-rawool-136879313" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/sanchit_rawool/" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-
-            <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
-                <div class="relative order-1 md:order-2">
-                    <div class="card bg-white p-2 rounded-2xl shadow-2xl overflow-hidden">
-                        <img src="https://placehold.co/600x400/c2f0c2/006400?text=QR+Menu+App+Screenshot" alt="Screenshot of QR Digital Menu Card App" class="rounded-xl w-full h-auto">
-                    </div>
-                    <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-xl">
-                        <i class="fas fa-qrcode text-white text-3xl"></i>
-                    </div>
-                </div>
-                <div class="card project-card p-10 bg-gradient-to-br from-emerald-50 to-teal-50 order-2 md:order-1">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 flex items-center justify-center mr-4">
-                            <i class="fas fa-utensils text-white text-xl"></i>
-                        </div>
-                        <h3 class="sub-heading text-emerald-700">QR Digital Menu Card</h3>
-                    </div>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        A simple and efficient digital menu solution for restaurants and cafes, allowing customers to scan a QR code to instantly view the menu on their mobile devices.
-                    </p>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-emerald-500 mt-1 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-gray-900">Contactless Menu Access:</strong> Enhance hygiene and safety by providing a digital menu.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-emerald-500 mt-1 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-gray-900">Easy Menu Updates:</strong> Effortlessly update menu items, prices, and daily specials in real-time.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-emerald-500 mt-1 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-gray-900">Enhanced Customer Experience:</strong> Provides a quick, convenient, and modern way to browse offerings.</span>
-                        </li>
-                    </ul>
-                    <div class="mt-8 text-center">
-                        <a href="https://qrtoorder.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-primary inline-block bg-gradient-to-r from-emerald-600 to-teal-600">
-                            View Live Demo
-                            <i class="fas fa-external-link-alt ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="card project-card p-10 bg-gradient-to-br from-orange-50 to-amber-50">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-orange-600 to-amber-600 flex items-center justify-center mr-4">
-                            <i class="fas fa-robot text-white text-xl"></i>
-                        </div>
-                        <h3 class="sub-heading text-orange-700">Foodie: Order Smarter, Serve Better <span class="text-base text-gray-500">(Under Construction)</span></h3>
-                    </div>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        "Foodie" is an advanced, AI-powered digital system designed to modernize the dining experience in cafés and restaurants, specifically tailored for hotels. It provides a seamless, intuitive, and highly customizable platform for both customers and hotel staff.
-                    </p>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-orange-500 mt-1 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-gray-900">AI-Powered Efficiency:</strong> Streamlines ordering and kitchen operations.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-orange-500 mt-1 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-gray-900">Customizable for Hotels:</strong> Tailored features to integrate with existing hotel systems.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-orange-500 mt-1 mr-3"></i>
-                            <span class="text-gray-700"><strong class="text-gray-900">Seamless Customer Experience:</strong> Intuitive interface for guests to browse and order.</span>
-                        </li>
-                    </ul>
-                    <div class="mt-8 text-center">
-                        <button class="inline-block bg-gradient-to-r from-gray-400 to-gray-500 text-white px-8 py-3 rounded-full shadow-lg cursor-not-allowed">
-                            Coming Soon!
-                        </button>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="card bg-white p-2 rounded-2xl shadow-2xl overflow-hidden">
-                        <img src="https://placehold.co/600x400/ffe0b2/e65100?text=Foodie+App+Screenshot" alt="Screenshot of Foodie App (Under Construction)" class="rounded-xl w-full h-auto">
-                    </div>
-                    <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-r from-orange-500 to-amber-600 rounded-full flex items-center justify-center shadow-xl">
-                        <i class="fas fa-bolt text-white text-3xl"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="why-choose-me" class="py-24 bg-gray-50">
-        <div class="container text-center">
-            <h2 class="section-heading">Why Choose My Solutions?</h2>
-            <p class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
-                Premium web development services tailored to your business needs
-            </p>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="card hover:border-indigo-300 transition-all duration-300">
-                    <div class="w-20 h-20 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-pen-fancy text-indigo-600 text-3xl"></i>
-                    </div>
-                    <h3 class="sub-heading">Customized for You</h3>
-                    <p class="text-gray-600">
-                        I build solutions tailored to your specific business needs, not just off-the-shelf templates. Every project is a unique creation.
-                    </p>
-                </div>
-                <div class="card hover:border-indigo-300 transition-all duration-300">
-                    <div class="w-20 h-20 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-rocket text-indigo-600 text-3xl"></i>
-                    </div>
-                    <h3 class="sub-heading">Modern & Reliable</h3>
-                    <p class="text-gray-600">
-                        Leveraging the latest web technologies for robust, secure, and high-performing applications that stand the test of time.
-                    </p>
-                </div>
-                <div class="card hover:border-indigo-300 transition-all duration-300">
-                    <div class="w-20 h-20 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-hands-helping text-indigo-600 text-3xl"></i>
-                    </div>
-                    <h3 class="sub-heading">Local Support</h3>
-                    <p class="text-gray-600">
-                        As a local developer in Kudal, I offer personalized support and understanding of your unique challenges and market needs.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="interests" class="py-24 bg-white">
-        <div class="container text-center">
-            <h2 class="section-heading">Interests & Activities</h2>
-            <p class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
-                Beyond coding: passions that fuel my creativity and problem-solving skills
-            </p>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="card hover:bg-gradient-to-br from-indigo-50 to-purple-50 transition-all duration-300">
-                    <div class="w-20 h-20 rounded-full bg-gradient-to-r from-blue-100 to-indigo-100 flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-gamepad text-blue-600 text-3xl"></i>
-                    </div>
-                    <h3 class="sub-heading">Esports & Game Testing</h3>
-                    <p class="text-gray-600">
-                        Enthusiast in esports and dedicated to game testing for quality assurance. This passion enhances my attention to detail and user experience understanding.
-                    </p>
-                </div>
-                <div class="card hover:bg-gradient-to-br from-indigo-50 to-purple-50 transition-all duration-300">
-                    <div class="w-20 h-20 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-paint-brush text-purple-600 text-3xl"></i>
-                    </div>
-                    <h3 class="sub-heading">Canvas Design & UI Prototyping</h3>
-                    <p class="text-gray-600">
-                        Passionate about creative canvas design and building intuitive UI prototypes. This artistic side complements my technical skills in creating beautiful interfaces.
-                    </p>
-                </div>
-                <div class="card hover:bg-gradient-to-br from-indigo-50 to-purple-50 transition-all duration-300">
-                    <div class="w-20 h-20 rounded-full bg-gradient-to-r from-green-100 to-teal-100 flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-lightbulb text-green-600 text-3xl"></i>
-                    </div>
-                    <h3 class="sub-heading">Exploring New Technologies</h3>
-                    <p class="text-gray-600">
-                        Constantly interested in building, exploring, and learning new technologies to stay ahead in the rapidly evolving digital landscape.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-gradient text-white py-28 rounded-t-3xl shadow-2xl relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/diamond-upholstery.png')]"></div>
-        </div>
-        <div class="container text-center relative z-10">
-            <h2 class="section-heading text-white">Get In Touch</h2>
-            <p class="text-xl text-indigo-100 mb-12 max-w-2xl mx-auto">
-                Ready to discuss your next web project or want to learn more about my solutions? Feel free to reach out directly!
-            </p>
-            <div class="max-w-2xl mx-auto glass-card p-10 rounded-2xl backdrop-blur-lg">
-                <div class="flex flex-col md:flex-row justify-center gap-10 mb-10">
-                    <div class="text-left">
-                        <h3 class="text-2xl font-bold mb-6 luxury-font">Contact Information</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-start">
-                                <i class="fas fa-envelope text-yellow-300 mt-1 mr-4"></i>
-                                <div>
-                                    <p class="text-indigo-100 text-sm">Email 1</p>
-                                    <a href="mailto:mac44srm@gmail.com" class="text-white hover:text-yellow-300 transition duration-300">mac44srm@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-envelope text-yellow-300 mt-1 mr-4"></i>
-                                <div>
-                                    <p class="text-indigo-100 text-sm">Email 2</p>
-                                    <a href="mailto:sanchitrawoolofc@gmail.com" class="text-white hover:text-yellow-300 transition duration-300">sanchitrawoolofc@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-phone-alt text-yellow-300 mt-1 mr-4"></i>
-                                <div>
-                                    <p class="text-indigo-100 text-sm">Phone</p>
-                                    <a href="tel:+917709942606" class="text-white hover:text-yellow-300 transition duration-300">+91 77099 42606</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-left">
-                        <h3 class="text-2xl font-bold mb-6 luxury-font">Social Media</h3>
-                        <div class="flex space-x-6 justify-center md:justify-start">
-                            <a href="https://www.instagram.com/sanchit_rawool/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition duration-300">
-                                <i class="fab fa-instagram text-yellow-300 text-xl"></i>
-                            </a>
-                            <a href="YOUR_LINKEDIN_PROFILE_URL" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition duration-300">
-                                <i class="fab fa-linkedin-in text-yellow-300 text-xl"></i>
-                            </a>
-                            <a href="YOUR_GITHUB_PROFILE_URL" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition duration-300">
-                                <i class="fab fa-github text-yellow-300 text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-8">
-                    <a href="mailto:mac44srm@gmail.com" class="btn-primary inline-block">
-                        <i class="fas fa-paper-plane mr-2"></i> Send Me a Message
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="bg-gray-900 text-gray-300 py-12">
-        <div class="container">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <h3 class="text-2xl font-bold text-white mb-2 luxury-font">Sanchit Rawool</h3>
-                    <p class="text-sm">Bringing Digital Visions to Life</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#about" class="text-gray-300 hover:text-white transition duration-300">About</a>
-                    <a href="#skills" class="text-gray-300 hover:text-white transition duration-300">Skills</a>
-                    <a href="#projects" class="text-gray-300 hover:text-white transition duration-300">Projects</a>
-                    <a href="#contact" class="text-gray-300 hover:text-white transition duration-300">Contact</a>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-                <p>&copy; <span id="current-year"></span> Sanchit Rawool. All rights reserved.</p>
-                <p class="mt-2">Built with <i class="fas fa-heart text-red-400"></i> and Code.</p>
-            </div>
+        <div class="container text-center">
+            <p>&copy; <span id="current-year"></span> Sanchit Rawool. All rights reserved.</p>
+            <p class="mt-2">Built with <i class="fas fa-heart text-red-400"></i> and Code.</p>
         </div>
     </footer>
 
-    <script>
-        // Update current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
