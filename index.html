@@ -7,11 +7,25 @@
     <meta name="description" content="Sanchit Rawool's portfolio showcasing custom web development and digital solutions. Bringing your digital visions to life with modern technologies like React, Node.js, and MongoDB.">
     <meta name="keywords" content="Sanchit Rawool, web developer, web solutions, React, Node.js, MongoDB, full-stack, portfolio, custom web applications, Kudal, Maharashtra, India, Python, Java, JavaScript, SQL, HTML, CSS, JSX, Express.js, MySQL, Git, GitHub, Netlify, Render, Cybersecurity, IT Support">
 
+    <!-- SEO Meta Tags -->
+    <meta name="author" content="Sanchit Rawool">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#3a0ca3">
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="YOUR_PORTFOLIO_URL_HERE">
     <meta property="og:title" content="Sanchit Rawool - Web Development & Digital Solutions">
     <meta property="og:description" content="Sanchit Rawool's portfolio showcasing custom web development and digital solutions.">
     <meta property="og:image" content="https://placehold.co/1200x630/e0e7ff/3f51b5?text=Sanchit+Rawool+Portfolio">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="YOUR_PORTFOLIO_URL_HERE">
+    <meta property="twitter:title" content="Sanchit Rawool - Web Development & Digital Solutions">
+    <meta property="twitter:description" content="Sanchit Rawool's portfolio showcasing custom web development and digital solutions.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/e0e7ff/3f51b5?text=Sanchit+Rawool+Portfolio">
 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -20,28 +34,87 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div id="ghost">
+              <div id="red">
+                <div id="pupil"></div>
+                <div id="pupil1"></div>
+                <div id="eye"></div>
+                <div id="eye1"></div>
+                <div id="top0"></div>
+                <div id="top1"></div>
+                <div id="top2"></div>
+                <div id="top3"></div>
+                <div id="top4"></div>
+                <div id="st0"></div>
+                <div id="st1"></div>
+                <div id="st2"></div>
+                <div id="st3"></div>
+                <div id="st4"></div>
+                <div id="st5"></div>
+                <div id="an1"></div>
+                <div id="an2"></div>
+                <div id="an3"></div>
+                <div id="an4"></div>
+                <div id="an5"></div>
+                <div id="an6"></div>
+                <div id="an7"></div>
+                <div id="an8"></div>
+                <div id="an9"></div>
+                <div id="an10"></div>
+                <div id="an11"></div>
+                <div id="an12"></div>
+                <div id="an13"></div>
+                <div id="an14"></div>
+                <div id="an15"></div>
+                <div id="an16"></div>
+                <div id="an17"></div>
+                <div id="an18"></div>
+              </div>
+              <div id="shadow"></div>
+            </div>
+            <h2 class="loading-text">Loading Portfolio...</h2>
+            <p class="loading-subtitle">Crafting Digital Excellence</p>
+        </div>
+    </div>
 
     <header class="hero-gradient text-white py-28 relative overflow-hidden">
+        <!-- Scroll Progress Indicator -->
+        <div id="scroll-progress" class="scroll-progress"></div>
         <div id="particles-js-header" class="absolute inset-0"></div>
         <div class="container text-center relative z-10">
             <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight luxury-font" data-aos="fade-down">
                 Hi, I'm <span style="color: var(--gold);">Sanchit Rawool</span>
             </h1>
+            <p class="text-lg md:text-xl mb-4 opacity-80 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="150">
+                Full-Stack Developer | Graphic/UI Designer | AI Tools Developer
+            </p>
             <p class="text-2xl md:text-3xl mb-10 opacity-90 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
                 Crafting <span class="luxury-font italic">Digital Excellence</span> Through Innovative Web Solutions
             </p>
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12" data-aos="fade-up" data-aos-delay="400">
-                <a href="#projects" class="btn-primary">View My Work</a>
-                <a href="#contact" class="btn-secondary">Get in Touch</a>
+                <a href="#projects" class="btn-primary btn-shine hover-lift gpu-accelerated">View My Work</a>
+                <a href="#contact" class="btn-secondary btn-pulse hover-glow gpu-accelerated">Get in Touch</a>
             </div>
             <nav class="mt-12" data-aos="fade-up" data-aos-delay="600">
                 <ul class="flex flex-wrap justify-center gap-6 sm:gap-10">
                     <li><a href="#about" class="navbar-link text-white hover:text-gold-300">About</a></li>
+                    <li><a href="#stats" class="navbar-link text-white hover:text-gold-300">Stats</a></li>
                     <li><a href="#skills" class="navbar-link text-white hover:text-gold-300">Skills</a></li>
                     <li><a href="#projects" class="navbar-link text-white hover:text-gold-300">Projects</a></li>
+                    <li><a href="#services" class="navbar-link text-white hover:text-gold-300">Services</a></li>
                     <li><a href="#certifications" class="navbar-link text-white hover:text-gold-300">Certifications</a></li>
                     <li><a href="#contact" class="navbar-link text-white hover:text-gold-300">Contact</a></li>
                 </ul>
+                <!-- Dark/Light Mode Toggle -->
+                <div class="flex justify-center mt-8">
+                    <button id="theme-toggle" class="theme-toggle-btn" data-aos="fade-up" data-aos-delay="700">
+                        <i class="fas fa-moon"></i>
+                        <span class="ml-2">Dark Mode</span>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
@@ -52,11 +125,36 @@
                 <h2 class="section-heading" data-aos="fade-up">About Me</h2>
                 <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
                     <p class="text-xl text-gray-700 leading-relaxed">
-                        I'm a Computer Science undergraduate from SRM College, Kudal (Mumbai University, Expected 2026), with hands-on experience in full-stack development using React, Node.js, MongoDB, and JavaScript.
+                        I’m a Computer Science undergraduate at SRM College, Kudal (Mumbai University, Class of 2026) focused on building reliable, scalable, and user‑centric web applications.
                     </p>
                     <p class="text-xl text-gray-700 mt-6 leading-relaxed">
-                        Passionate about building smart, user-friendly applications, exploring new technologies, and delivering complete project solutions efficiently. I am also a Google Certified Cybersecurity and IT Support Professional.
+                        I specialize in modern full‑stack development with React, Node.js, Express, and MongoDB—delivering clean code, thoughtful UX, and end‑to‑end solutions. I’m also Google‑certified in Cybersecurity and IT Support.
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section id="stats" class="py-24 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+            <div class="container text-center">
+                <h2 class="section-heading text-white" data-aos="fade-up">My Achievements</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+                    <div class="stat-card hover-lift gpu-accelerated float-animation" data-aos="fade-up">
+                        <div class="stat-number text-4xl md:text-5xl font-bold mb-2 gradient-text" data-target="9">0</div>
+                        <p class="text-lg opacity-90">Projects Completed</p>
+                    </div>
+                    <div class="stat-card hover-glow gpu-accelerated" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-number text-4xl md:text-5xl font-bold mb-2 gradient-text" data-target="15">0</div>
+                        <p class="text-lg opacity-90">Technologies Mastered</p>
+                    </div>
+                    <div class="stat-card hover-scale gpu-accelerated float-animation" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-number text-4xl md:text-5xl font-bold mb-2 gradient-text" data-target="2000">0</div>
+                        <p class="text-lg opacity-90">Hours of Coding</p>
+                    </div>
+                    <div class="stat-card hover-rotate gpu-accelerated" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-number text-4xl md:text-5xl font-bold mb-2 gradient-text" data-target="2">0</div>
+                        <p class="text-lg opacity-90">Certifications Earned</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -68,32 +166,32 @@
                 <div class="mt-16">
                     <h3 class="sub-heading" data-aos="fade-up">Core Technologies</h3>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <div class="card" data-aos="fade-up"><img src="https://img.icons8.com/color/96/000000/python--v1.png" alt="Python Icon" class="skill-icon"/><p>Python</p></div>
-                        <div class="card" data-aos="fade-up" data-aos-delay="100"><img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo--v1.png" alt="Java Icon" class="skill-icon"/><p>Java</p></div>
-                        <div class="card" data-aos="fade-up" data-aos-delay="200"><img src="https://img.icons8.com/color/96/000000/javascript--v1.png" alt="JavaScript Icon" class="skill-icon"/><p>JavaScript</p></div>
-                        <div class="card" data-aos="fade-up" data-aos-delay="300"><img src="https://img.icons8.com/ios-filled/96/000000/data-recovery.png" alt="SQL Icon" class="skill-icon sql-icon"/><p>SQL</p></div>
+                        <div class="modern-card hover-lift gpu-accelerated" data-aos="fade-up"><img src="https://img.icons8.com/color/96/000000/python--v1.png" alt="Python Icon" class="skill-icon"/><p>Python</p></div>
+                        <div class="modern-card hover-glow gpu-accelerated" data-aos="fade-up" data-aos-delay="100"><img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo--v1.png" alt="Java Icon" class="skill-icon"/><p>Java</p></div>
+                        <div class="modern-card hover-scale gpu-accelerated" data-aos="fade-up" data-aos-delay="200"><img src="https://img.icons8.com/color/96/000000/javascript--v1.png" alt="JavaScript Icon" class="skill-icon"/><p>JavaScript</p></div>
+                        <div class="modern-card hover-rotate gpu-accelerated" data-aos="fade-up" data-aos-delay="300"><img src="https://img.icons8.com/ios-filled/96/000000/data-recovery.png" alt="SQL Icon" class="skill-icon sql-icon"/><p>SQL</p></div>
                     </div>
                 </div>
 
                 <div class="mt-16">
                     <h3 class="sub-heading" data-aos="fade-up">Frontend & Backend</h3>
                     <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
-                        <div class="card" data-aos="fade-up"><img src="https://img.icons8.com/color/96/000000/html-5--v1.png" alt="HTML5 Icon" class="skill-icon"/><p>HTML5</p></div>
-                        <div class="card" data-aos="fade-up" data-aos-delay="100"><img src="https://img.icons8.com/color/96/000000/css3.png" alt="CSS3 Icon" class="skill-icon"/><p>CSS3</p></div>
-                        <div class="card" data-aos="fade-up" data-aos-delay="200"><img src="https://img.icons8.com/officel/80/000000/react.png" alt="React Icon" class="skill-icon"/><p>React.js</p></div>
-                        <div class="card" data-aos="fade-up" data-aos-delay="300"><img src="https://img.icons8.com/fluency/96/000000/node-js.png" alt="Node.js Icon" class="skill-icon"/><p>Node.js</p></div>
-                        <div class="card" data-aos="fade-up" data-aos-delay="400"><img src="https://img.icons8.com/color/96/000000/express-js.png" alt="Express.js Icon" class="skill-icon"/><p>Express.js</p></div>
+                        <div class="modern-card hover-lift gpu-accelerated" data-aos="fade-up"><img src="https://img.icons8.com/color/96/000000/html-5--v1.png" alt="HTML5 Icon" class="skill-icon"/><p>HTML5</p></div>
+                        <div class="modern-card hover-glow gpu-accelerated" data-aos="fade-up" data-aos-delay="100"><img src="https://img.icons8.com/color/96/000000/css3.png" alt="CSS3 Icon" class="skill-icon"/><p>CSS3</p></div>
+                        <div class="modern-card hover-scale gpu-accelerated" data-aos="fade-up" data-aos-delay="200"><img src="https://img.icons8.com/officel/80/000000/react.png" alt="React Icon" class="skill-icon"/><p>React.js</p></div>
+                        <div class="modern-card hover-rotate gpu-accelerated" data-aos="fade-up" data-aos-delay="300"><img src="https://img.icons8.com/fluency/96/000000/node-js.png" alt="Node.js Icon" class="skill-icon"/><p>Node.js</p></div>
+                        <div class="modern-card hover-lift gpu-accelerated" data-aos="fade-up" data-aos-delay="400"><img src="https://img.icons8.com/color/96/000000/express-js.png" alt="Express.js Icon" class="skill-icon"/><p>Express.js</p></div>
                     </div>
                 </div>
 
                 <div class="mt-16">
                     <h3 class="sub-heading" data-aos="fade-up">Databases & Development Tools</h3>
                     <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
-                        <div class="card" data-aos="fade-up"><img src="https://img.icons8.com/color/96/000000/mongodb.png" alt="MongoDB Icon" class="skill-icon"/><p>MongoDB</p></div>
-                        <div class="card" data-aos="fade-up" data-aos-delay="100"><img src="https://img.icons8.com/external-soft-fill-juicy-fish/60/external-mysql-databases-soft-fill-soft-fill-juicy-fish.png" alt="MySQL Icon" class="skill-icon"/><p>MySQL</p></div>
-                        <div class="card" data-aos="fade-up" data-aos-delay="200"><img src="https://img.icons8.com/color/96/000000/git.png" alt="Git Icon" class="skill-icon"/><p>Git & GitHub</p></div>
-                        <div class="card" data-aos="fade-up" data-aos-delay="300"><img src="https://img.icons8.com/color/96/000000/postman-api.png" alt="Postman Icon" class="skill-icon"/><p>Postman</p></div>
-                        <div class="card" data-aos="fade-up" data-aos-delay="400"><img src="https://img.icons8.com/color/96/000000/visual-studio-code-2019.png" alt="VS Code Icon" class="skill-icon"/><p>VS Code</p></div>
+                        <div class="modern-card hover-lift gpu-accelerated" data-aos="fade-up"><img src="https://img.icons8.com/color/96/000000/mongodb.png" alt="MongoDB Icon" class="skill-icon"/><p>MongoDB</p></div>
+                        <div class="modern-card hover-glow gpu-accelerated" data-aos="fade-up" data-aos-delay="100"><img src="https://img.icons8.com/external-soft-fill-juicy-fish/60/external-mysql-databases-soft-fill-soft-fill-juicy-fish.png" alt="MySQL Icon" class="skill-icon"/><p>MySQL</p></div>
+                        <div class="modern-card hover-scale gpu-accelerated" data-aos="fade-up" data-aos-delay="200"><img src="https://img.icons8.com/color/96/000000/git.png" alt="Git Icon" class="skill-icon"/><p>Git & GitHub</p></div>
+                        <div class="modern-card hover-rotate gpu-accelerated" data-aos="fade-up" data-aos-delay="300"><img src="https://img.icons8.com/color/96/000000/postman-api.png" alt="Postman Icon" class="skill-icon"/><p>Postman</p></div>
+                        <div class="modern-card hover-lift gpu-accelerated" data-aos="fade-up" data-aos-delay="400"><img src="https://img.icons8.com/color/96/000000/visual-studio-code-2019.png" alt="VS Code Icon" class="skill-icon"/><p>VS Code</p></div>
                     </div>
                 </div>
             </div>
@@ -104,49 +202,181 @@
                 <h2 class="section-heading text-center" data-aos="fade-up">Featured Projects</h2>
                 <div class="space-y-24 mt-16">
                     <div class="grid md:grid-cols-2 gap-12 items-center">
-                        <div class="project-image-container" data-aos="fade-right">
-                            <img src="Feed.jpg" alt="Feedback App Screenshot" class="rounded-lg shadow-xl">
+                        <div class="project-image-container hover-lift gpu-accelerated" data-aos="fade-right">
+                            <img src="Feed.jpg" alt="Feedback App Screenshot" class="rounded-lg shadow-xl lazy" loading="lazy">
                         </div>
                         <div data-aos="fade-left">
                             <h3 class="text-3xl font-bold mb-4 luxury-font text-indigo-700">Feedback Web Application</h3>
                             <p class="text-gray-600 mb-6">A customer feedback system for restaurants to gather valuable guest insights and improve services.</p>
+                            <div class="mb-6">
+                                <button onclick="toggleCaseStudy('feedback')" class="case-study-toggle">
+                                    <i class="fas fa-plus-circle"></i> View Detailed Case Study
+                                </button>
+                            </div>
+                            <div id="feedback-case-study" class="case-study-content" style="display: none;">
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-indigo-600 mb-2"><i class="fas fa-question-circle"></i> Problem Statement</h4>
+                                    <p class="text-gray-700 mb-4">Restaurants struggled to collect meaningful customer feedback efficiently, leading to missed opportunities for service improvement and customer retention.</p>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-indigo-600 mb-2"><i class="fas fa-lightbulb"></i> Solution Approach</h4>
+                                    <p class="text-gray-700 mb-4">Built a comprehensive feedback system with intuitive UI, real-time analytics dashboard, and automated response generation.</p>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-indigo-600 mb-2"><i class="fas fa-code"></i> Technologies Used</h4>
+                                    <div class="tech-stack">
+                                        <span class="tech-badge">React.js</span>
+                                        <span class="tech-badge">Node.js</span>
+                                        <span class="tech-badge">MongoDB</span>
+                                        <span class="tech-badge">Express.js</span>
+                                        <span class="tech-badge">Chart.js</span>
+                                    </div>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-indigo-600 mb-2"><i class="fas fa-exclamation-triangle"></i> Challenges Faced</h4>
+                                    <p class="text-gray-700 mb-4">Implementing real-time data synchronization and creating an intuitive admin dashboard for restaurant owners.</p>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-indigo-600 mb-2"><i class="fas fa-trophy"></i> Results & Achievements</h4>
+                                    <p class="text-gray-700 mb-4">Successfully deployed with 95% user satisfaction rate and 40% improvement in response time to customer feedback.</p>
+                                </div>
+                            </div>
                             <a href="https://feedbacksyste.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-primary">View Live Demo <i class="fas fa-external-link-alt ml-2"></i></a>
                         </div>
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-12 items-center">
                         <div class="md:order-2" data-aos="fade-left">
-                             <div class="project-image-container">
-                                <img src="QR.jpg" alt="QR Menu App Screenshot" class="rounded-lg shadow-xl">
+                             <div class="project-image-container hover-glow gpu-accelerated">
+                                <img src="QR.jpg" alt="QR Menu App Screenshot" class="rounded-lg shadow-xl lazy" loading="lazy">
                             </div>
                         </div>
                         <div class="md:order-1" data-aos="fade-right">
                             <h3 class="text-3xl font-bold mb-4 luxury-font text-emerald-700">Digi MenuCard</h3>
                             <p class="text-gray-600 mb-6">A digital restaurant menu web application, allowing customers to scan a QR code to instantly view the menu.</p>
+                            <div class="mb-6">
+                                <button onclick="toggleCaseStudy('digimenu')" class="case-study-toggle">
+                                    <i class="fas fa-plus-circle"></i> View Detailed Case Study
+                                </button>
+                            </div>
+                            <div id="digimenu-case-study" class="case-study-content" style="display: none;">
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-emerald-600 mb-2"><i class="fas fa-question-circle"></i> Problem Statement</h4>
+                                    <p class="text-gray-700 mb-4">Traditional paper menus are expensive to print, difficult to update, and create hygiene concerns in restaurants.</p>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-emerald-600 mb-2"><i class="fas fa-lightbulb"></i> Solution Approach</h4>
+                                    <p class="text-gray-700 mb-4">Developed a QR code-based digital menu system with admin panel for easy menu updates and customer-friendly mobile interface.</p>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-emerald-600 mb-2"><i class="fas fa-code"></i> Technologies Used</h4>
+                                    <div class="tech-stack">
+                                        <span class="tech-badge">HTML5</span>
+                                        <span class="tech-badge">CSS3</span>
+                                        <span class="tech-badge">JavaScript</span>
+                                        <span class="tech-badge">QR Code API</span>
+                                        <span class="tech-badge">Responsive Design</span>
+                                    </div>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-emerald-600 mb-2"><i class="fas fa-exclamation-triangle"></i> Challenges Faced</h4>
+                                    <p class="text-gray-700 mb-4">Ensuring cross-device compatibility and implementing offline functionality for poor network conditions.</p>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-emerald-600 mb-2"><i class="fas fa-trophy"></i> Results & Achievements</h4>
+                                    <p class="text-gray-700 mb-4">Reduced menu printing costs by 80% and increased order accuracy with real-time menu updates capability.</p>
+                                </div>
+                            </div>
                             <a href="https://qrtoorder.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: linear-gradient(to right, #006400, #00A96E);">View Live Demo <i class="fas fa-external-link-alt ml-2"></i></a>
                         </div>
                     </div>
 
                     <!-- Maharaja Project Section -->
                     <div class="grid md:grid-cols-2 gap-12 items-center">
-                        <div class="project-image-container" data-aos="fade-right">
-                             <img src="MH.jpg" alt="Hotel Maharaja App Screenshot" class="rounded-lg shadow-xl">
+                        <div class="project-image-container hover-scale gpu-accelerated" data-aos="fade-right">
+                             <img src="MH.jpg" alt="Hotel Maharaja App Screenshot" class="rounded-lg shadow-xl lazy" loading="lazy">
                         </div>
                         <div data-aos="fade-left">
                             <h3 class="text-3xl font-bold mb-4 luxury-font text-purple-700">Hotel Maharaja</h3>
                             <p class="text-gray-600 mb-6">A premium hotel website showcasing luxury accommodations, dining options, and exceptional hospitality services.</p>
+                            <div class="mb-6">
+                                <button onclick="toggleCaseStudy('maharaja')" class="case-study-toggle">
+                                    <i class="fas fa-plus-circle"></i> View Detailed Case Study
+                                </button>
+                            </div>
+                            <div id="maharaja-case-study" class="case-study-content" style="display: none;">
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-purple-600 mb-2"><i class="fas fa-question-circle"></i> Problem Statement</h4>
+                                    <p class="text-gray-700 mb-4">Luxury hotels needed a modern, elegant online presence to showcase their premium services and attract high-end clientele.</p>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-purple-600 mb-2"><i class="fas fa-lightbulb"></i> Solution Approach</h4>
+                                    <p class="text-gray-700 mb-4">Created a sophisticated website with luxury design elements, booking system integration, and immersive visual storytelling.</p>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-purple-600 mb-2"><i class="fas fa-code"></i> Technologies Used</h4>
+                                    <div class="tech-stack">
+                                        <span class="tech-badge">React.js</span>
+                                        <span class="tech-badge">Tailwind CSS</span>
+                                        <span class="tech-badge">Framer Motion</span>
+                                        <span class="tech-badge">Node.js</span>
+                                        <span class="tech-badge">MongoDB</span>
+                                    </div>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-purple-600 mb-2"><i class="fas fa-exclamation-triangle"></i> Challenges Faced</h4>
+                                    <p class="text-gray-700 mb-4">Balancing luxury aesthetics with fast loading times and implementing complex booking workflows.</p>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-purple-600 mb-2"><i class="fas fa-trophy"></i> Results & Achievements</h4>
+                                    <p class="text-gray-700 mb-4">Achieved 50% increase in online inquiries and created a premium brand experience that reflects the hotel's luxury positioning.</p>
+                                </div>
+                            </div>
                             <a href="https://hotel-maharaja.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: linear-gradient(to right, #7C3AED, #A855F7);">View Live Demo <i class="fas fa-external-link-alt ml-2"></i></a>
                         </div>
                     </div>
 
                     <!-- UPDATED PROJECT SECTION -->
                     <div class="grid md:grid-cols-2 gap-12 items-center">
-                        <div class="project-image-container" data-aos="fade-right">
-                             <img src="Foodie .jpg" alt="Foodie Friend App Screenshot" class="rounded-lg shadow-xl">
+                        <div class="project-image-container hover-rotate gpu-accelerated" data-aos="fade-right">
+                             <img src="Foodie .jpg" alt="Foodie Friend App Screenshot" class="rounded-lg shadow-xl lazy" loading="lazy">
                         </div>
                         <div data-aos="fade-left">
                             <h3 class="text-3xl font-bold mb-4 luxury-font text-orange-700">Foodie Friend</h3>
                             <p class="text-gray-600 mb-6">A web application for food lovers to discover new recipes and culinary ideas, built with a modern tech stack.</p>
+                            <div class="mb-6">
+                                <button onclick="toggleCaseStudy('foodie')" class="case-study-toggle">
+                                    <i class="fas fa-plus-circle"></i> View Detailed Case Study
+                                </button>
+                            </div>
+                            <div id="foodie-case-study" class="case-study-content" style="display: none;">
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-orange-600 mb-2"><i class="fas fa-question-circle"></i> Problem Statement</h4>
+                                    <p class="text-gray-700 mb-4">Food enthusiasts lacked a centralized platform to discover, share, and organize culinary content and recipes.</p>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-orange-600 mb-2"><i class="fas fa-lightbulb"></i> Solution Approach</h4>
+                                    <p class="text-gray-700 mb-4">Developed a community-driven platform with recipe sharing, meal planning features, and social interaction capabilities.</p>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-orange-600 mb-2"><i class="fas fa-code"></i> Technologies Used</h4>
+                                    <div class="tech-stack">
+                                        <span class="tech-badge">React.js</span>
+                                        <span class="tech-badge">Firebase</span>
+                                        <span class="tech-badge">Tailwind CSS</span>
+                                        <span class="tech-badge">Node.js</span>
+                                        <span class="tech-badge">Cloudinary</span>
+                                    </div>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-orange-600 mb-2"><i class="fas fa-exclamation-triangle"></i> Challenges Faced</h4>
+                                    <p class="text-gray-700 mb-4">Implementing real-time features, managing user-generated content, and creating an intuitive recipe discovery algorithm.</p>
+                                </div>
+                                <div class="case-study-section">
+                                    <h4 class="text-lg font-semibold text-orange-600 mb-2"><i class="fas fa-trophy"></i> Results & Achievements</h4>
+                                    <p class="text-gray-700 mb-4">Built an engaged community of 500+ users with 1000+ recipes shared and 85% user retention rate in the first quarter.</p>
+                                </div>
+                            </div>
                             <a href="https://foodiefrd.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: linear-gradient(to right, #dd6b20, #f6ad55);">View Live Demo <i class="fas fa-external-link-alt ml-2"></i></a>
                         </div>
                     </div>
@@ -178,6 +408,54 @@
                         <h3 class="font-bold text-xl my-3">Google IT Support Specialization</h3>
                         <p class="text-gray-600">Topics: Technical Support Fundamentals, Networking, Operating Systems, System Administration, and IT Security.</p>
                          <p class="text-sm text-gray-500 mt-4">Issued by: Coursera</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Offered Section -->
+        <section id="services" class="py-24 bg-white">
+            <div class="container">
+                <h2 class="section-heading text-center" data-aos="fade-up">Services I Offer</h2>
+                <div class="grid md:grid-cols-3 gap-8 mt-16">
+                    <div class="service-card card" data-aos="fade-up">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-indigo-700">Full-Stack Web Development</h3>
+                        <p class="text-gray-600 mb-4">Complete web application development from concept to deployment using modern technologies like React, Node.js, and MongoDB.</p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Frontend Development</li>
+                            <li>• Backend API Development</li>
+                            <li>• Database Design</li>
+                            <li>• Deployment & Hosting</li>
+                        </ul>
+                    </div>
+                    <div class="service-card card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-purple-700">UI/UX Design</h3>
+                        <p class="text-gray-600 mb-4">Creating beautiful, user-friendly interfaces with modern design principles and responsive layouts.</p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Wireframing & Prototyping</li>
+                            <li>• Responsive Design</li>
+                            <li>• User Experience Optimization</li>
+                            <li>• Design Systems</li>
+                        </ul>
+                    </div>
+                    <div class="service-card card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-emerald-700">AI Tools Development</h3>
+                        <p class="text-gray-600 mb-4">Building intelligent applications and tools using AI/ML technologies to solve complex problems.</p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Machine Learning Solutions</li>
+                            <li>• AI-Powered Applications</li>
+                            <li>• Data Analysis Tools</li>
+                            <li>• Automation Scripts</li>
+                        </ul>
                     </div>
                 </div>
             </div>
