@@ -63,7 +63,7 @@ my-portfolio/
 - Tailwind CDN: https://cdn.tailwindcss.com/
 
 ## License
-No license specified. Add a LICENSE file if you intend others to reuse your work.
+MIT © 2025 Sanchit Rawool — see [LICENSE](./LICENSE) for details.
 
 ## Contact
 - Email: sanchitrawool@gmail.com | mac44srm@gmail.com

@@ -234,6 +234,50 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', handleScrollThrottled, { passive: true });
     updateScrollProgress(); // Initial call
 
+    // Back to Top Button behavior
+    const backToTopBtn = document.getElementById('back-to-top');
+    const updateBackToTop = () => {
+        if (!backToTopBtn) return;
+        const y = window.pageYOffset || document.documentElement.scrollTop;
+        if (y > 600) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    };
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+    window.addEventListener('scroll', () => requestAnimationFrame(updateBackToTop), { passive: true });
+    updateBackToTop();
+
+    // Highlight active nav link based on section in view
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = Array.from(document.querySelectorAll('nav .navbar-link'));
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+        });
+    }, { threshold: 0.6 });
+    sections.forEach(sec => sectionObserver.observe(sec));
+
+    // Respect reduced motion: disable AOS if user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (prefersReducedMotion.matches) {
+        try { AOS.disable(); } catch (e) {}
+    }
+
     // Performance monitoring (development only)
     if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
         console.log('🚀 Portfolio Performance Metrics:');
@@ -261,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     // Initialize Particles.js
-    particlesJS('particles-js-header', {
+    const initParticles = () => particlesJS('particles-js-header', {
         particles: {
             number: { value: 60, density: { enable: true, value_area: 800 } },
             color: { value: "#ffffff" },
@@ -278,8 +322,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         retina_detect: true
     });
-
-    particlesJS('particles-js-contact', {
+    const initParticlesContact = () => particlesJS('particles-js-contact', {
         particles: {
             number: { value: 50, density: { enable: true, value_area: 800 } },
             color: { value: "#ffffff" },
@@ -295,4 +338,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         retina_detect: true
     });
+    if (!prefersReducedMotion.matches) {
+        initParticles();
+        initParticlesContact();
+    }
 });

@@ -27,13 +27,47 @@
     <meta property="twitter:description" content="Sanchit Rawool's portfolio showcasing custom web development and digital solutions.">
     <meta property="twitter:image" content="https://placehold.co/1200x630/e0e7ff/3f51b5?text=Sanchit+Rawool+Portfolio">
 
+        <!-- Performance Hints -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
+
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Sanchit Rawool",
+            "url": "YOUR_PORTFOLIO_URL_HERE",
+            "sameAs": [
+                "https://in.linkedin.com/in/sanchit-rawool-136879313",
+                "https://github.com/SanchitRawool36",
+                "https://www.instagram.com/sanchit_rawool/"
+            ]
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sanchit Rawool - Web Development & Digital Solutions",
+            "url": "YOUR_PORTFOLIO_URL_HERE",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "YOUR_PORTFOLIO_URL_HERE/?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+        </script>
 </head>
 <body class="antialiased">
+        <!-- Skip to content for accessibility -->
+        <a class="skip-link" href="#main">Skip to content</a>
     <!-- Loading Screen -->
     <div id="loading-screen" class="loading-screen">
         <div class="loading-content">
@@ -119,7 +153,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <section id="about" class="py-24 bg-white">
             <div class="container text-center">
                 <h2 class="section-heading" data-aos="fade-up">About Me</h2>
@@ -203,7 +237,7 @@
                 <div class="space-y-24 mt-16">
                     <div class="grid md:grid-cols-2 gap-12 items-center">
                         <div class="project-image-container hover-lift gpu-accelerated" data-aos="fade-right">
-                            <img src="Feed.jpg" alt="Feedback App Screenshot" class="rounded-lg shadow-xl lazy" loading="lazy">
+                            <img src="Feed.jpg" alt="Feedback App Screenshot" class="rounded-lg shadow-xl lazy" loading="lazy" decoding="async">
                         </div>
                         <div data-aos="fade-left">
                             <h3 class="text-3xl font-bold mb-4 luxury-font text-indigo-700">Feedback Web Application</h3>
@@ -247,8 +281,8 @@
 
                     <div class="grid md:grid-cols-2 gap-12 items-center">
                         <div class="md:order-2" data-aos="fade-left">
-                             <div class="project-image-container hover-glow gpu-accelerated">
-                                <img src="QR.jpg" alt="QR Menu App Screenshot" class="rounded-lg shadow-xl lazy" loading="lazy">
+                                      <div class="project-image-container hover-glow gpu-accelerated">
+                                          <img src="QR.jpg" alt="QR Menu App Screenshot" class="rounded-lg shadow-xl lazy" loading="lazy" decoding="async">
                             </div>
                         </div>
                         <div class="md:order-1" data-aos="fade-right">
@@ -293,8 +327,8 @@
 
                     <!-- Maharaja Project Section -->
                     <div class="grid md:grid-cols-2 gap-12 items-center">
-                        <div class="project-image-container hover-scale gpu-accelerated" data-aos="fade-right">
-                             <img src="MH.jpg" alt="Hotel Maharaja App Screenshot" class="rounded-lg shadow-xl lazy" loading="lazy">
+                    <div class="project-image-container hover-scale gpu-accelerated" data-aos="fade-right">
+                        <img src="MH.jpg" alt="Hotel Maharaja App Screenshot" class="rounded-lg shadow-xl lazy" loading="lazy" decoding="async">
                         </div>
                         <div data-aos="fade-left">
                             <h3 class="text-3xl font-bold mb-4 luxury-font text-purple-700">Hotel Maharaja</h3>
@@ -338,8 +372,8 @@
 
                     <!-- UPDATED PROJECT SECTION -->
                     <div class="grid md:grid-cols-2 gap-12 items-center">
-                        <div class="project-image-container hover-rotate gpu-accelerated" data-aos="fade-right">
-                             <img src="Foodie .jpg" alt="Foodie Friend App Screenshot" class="rounded-lg shadow-xl lazy" loading="lazy">
+                    <div class="project-image-container hover-rotate gpu-accelerated" data-aos="fade-right">
+                        <img src="Foodie .jpg" alt="Foodie Friend App Screenshot" class="rounded-lg shadow-xl lazy" loading="lazy" decoding="async">
                         </div>
                         <div data-aos="fade-left">
                             <h3 class="text-3xl font-bold mb-4 luxury-font text-orange-700">Foodie Friend</h3>
@@ -489,6 +523,11 @@
             </div>
         </section>
     </main>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <footer class="bg-gray-900 text-gray-300 py-12">
         <div class="container text-center">
